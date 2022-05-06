@@ -1,4 +1,4 @@
-<section class="section-lg d-flex justify-content-center align-items-center">
+<section class="section d-flex justify-content-center align-items-center">
   <.form let={f} for={@conn} action={Routes.admin_session_path(@conn, :create)} as={:admin} class="form-login">
     <%= if @error_message do %>
       <div class="alert alert-danger">
