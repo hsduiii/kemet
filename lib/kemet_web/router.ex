@@ -19,7 +19,7 @@ defmodule KemetWeb.Router do
 
   scope "/", KemetWeb do
     pipe_through :browser
-    get "/app", PageController, :index
+    get "/home", PageController, :index
   end
 
   # Other scopes may use custom stacks.
