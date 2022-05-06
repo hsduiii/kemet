@@ -20,7 +20,7 @@ defmodule KemetWeb.Router do
   scope "/", KemetWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", AdminSessionController, :new
   end
 
   # Other scopes may use custom stacks.
@@ -64,7 +64,7 @@ defmodule KemetWeb.Router do
 
     get "/admins/register", AdminRegistrationController, :new
     post "/admins/register", AdminRegistrationController, :create
-    get "/admins/log_in", AdminSessionController, :new
+    # get "/admins/log_in", AdminSessionController, :new
     post "/admins/log_in", AdminSessionController, :create
     get "/admins/reset_password", AdminResetPasswordController, :new
     post "/admins/reset_password", AdminResetPasswordController, :create
@@ -83,7 +83,7 @@ defmodule KemetWeb.Router do
   scope "/", KemetWeb do
     pipe_through [:browser]
 
-    get "/admins/log_out", AdminSessionController, :delete
+    delete "/admins/log_out", AdminSessionController, :delete
     get "/admins/confirm", AdminConfirmationController, :new
     post "/admins/confirm", AdminConfirmationController, :create
     get "/admins/confirm/:token", AdminConfirmationController, :edit
