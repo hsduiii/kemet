@@ -83,7 +83,7 @@ defmodule KemetWeb.Router do
   scope "/", KemetWeb do
     pipe_through [:browser]
 
-    delete "/admins/log_out", AdminSessionController, :delete
+    get "/admins/log_out", AdminSessionController, :delete
     get "/admins/confirm", AdminConfirmationController, :new
     post "/admins/confirm", AdminConfirmationController, :create
     get "/admins/confirm/:token", AdminConfirmationController, :edit
