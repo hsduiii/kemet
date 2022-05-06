@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid mx-5">
+  <div class="container-fluid mx-4">
     <button 
       class="navbar-toggler"
       type="button" 
@@ -11,20 +11,19 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a href="https://www.kemet.com/en/us.html" class="kemet-logo navbar-brand">
-        <h3>KEMET <span class="badge bg-primary">v1.0</span></h3>
+      <a href="https://www.kemet.com/en/us.html" class="navbar-brand">
+        <h4>KEMET <span class="badge bg-primary">v1.0</span></h4>
       </a> 
       <ul class="navbar-nav ms-auto">
       <%= if @current_admin do %>
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
             <%= @current_admin.email %>
-            <!--<img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="24" height="24">-->
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-            <li><%= link "Settings", to: Routes.admin_settings_path(@conn, :edit), class: "dropdown-item" %></li>
+            <li><%= link "Mi cuenta", to: Routes.admin_settings_path(@conn, :edit), class: "dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
-            <li><%= link "Log out", to: Routes.admin_session_path(@conn, :delete), method: :delete, class: "dropdown-item" %></li>
+            <li><%= link "Cerrar Sesión", to: Routes.admin_session_path(@conn, :delete), method: :delete, class: "dropdown-item" %></li>
           </ul>
         </div>
       <% end %>
