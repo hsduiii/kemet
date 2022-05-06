@@ -20,3 +20,11 @@ html, body {
 .section-lg {
 	height: 60vh;
 }
+
+.form-login {
+	width: 100%;
+	max-width: 630px;
+	padding: 15px;
+	margin: auto;
+	text-align: center;
+}
