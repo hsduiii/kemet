@@ -35,7 +35,9 @@
                 <%= employee.age %>
               </td>
               <td>
-                <%= employee.active %>
+                <%= if employee.active do %>
+                  <i class="bi-check fs-5 text-dark"></i>
+                <% end %>
               </td>
               <td>
                 <%= employee.inserted_at %>
