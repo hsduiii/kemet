@@ -19,7 +19,6 @@ defmodule KemetWeb.Router do
 
   scope "/", KemetWeb do
     pipe_through :browser
-    get "/home", PageController, :index
   end
 
   # Other scopes may use custom stacks.
@@ -74,15 +73,23 @@ defmodule KemetWeb.Router do
   scope "/", KemetWeb do
     pipe_through [:browser, :require_authenticated_admin]
 
+    # Home
+    get "/home", PageController, :index
+
+    # Admins
     get "/admins/settings", AdminSettingsController, :edit
     put "/admins/settings", AdminSettingsController, :update
     get "/admins/settings/confirm_email/:token", AdminSettingsController, :confirm_email
+    delete "/admins/log_out", AdminSessionController, :delete
+
+    # Employees
+    resources "/employees", EmployeeController
+
   end
 
   scope "/", KemetWeb do
     pipe_through [:browser]
 
-    delete "/admins/log_out", AdminSessionController, :delete
     get "/admins/confirm", AdminConfirmationController, :new
     post "/admins/confirm", AdminConfirmationController, :create
     get "/admins/confirm/:token", AdminConfirmationController, :edit

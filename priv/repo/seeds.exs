@@ -11,3 +11,4 @@
 # and so on) as they will fail if something goes wrong.
 alias Kemet.Repo, as: Db
 Db.insert!(%Kemet.Accounts.Admin{email: "admin@kemet.com.mx", hashed_password: Bcrypt.hash_pwd_salt("adm1n!007")})
+Db.insert!(%Kemet.Employees.Employee{name: "Héctor", lastname: "Salinas", age: 26, active: :true})
