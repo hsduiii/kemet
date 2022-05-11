@@ -5,23 +5,26 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
+  <%= label f, :name, class: "form-label" %>
+  <%= text_input f, :name, class: "form-control" %>
   <%= error_tag f, :name %>
 
-  <%= label f, :lastname %>
-  <%= text_input f, :lastname %>
+  <%= label f, :lastname, class: "form-label" %>
+  <%= text_input f, :lastname, class: "form-control" %>
   <%= error_tag f, :lastname %>
 
-  <%= label f, :age %>
-  <%= number_input f, :age %>
+  <%= label f, :age, class: "form-label" %>
+  <%= number_input f, :age, class: "form-control" %>
   <%= error_tag f, :age %>
 
-  <%= label f, :active %>
-  <%= checkbox f, :active %>
-  <%= error_tag f, :active %>
+  <div class="form-check mt-3">
+    <%= label f, :active, class: "form-check-label" %>
+    <%= checkbox f, :active, class: "form-check-input" %>
+    <%= error_tag f, :active %>
+  </div>
 
-  <div>
-    <%= submit "Save" %>
+  <div class="d-flex justify-content-end mt-3">
+    <%= submit "Guardar", class: "btn btn-outline-primary me-2" %>
+    <%= button "Regresar", to: Routes.employee_path(@conn, :index), class: "btn btn-sm btn-dark", method: :get %>
   </div>
 </.form>

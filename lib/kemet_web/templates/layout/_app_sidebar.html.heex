@@ -1,12 +1,26 @@
 <div class="d-flex flex-column flex-shrink-0 bg-light sidebar" style="width: 4.5rem;">
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
-            <a href={Routes.page_path(@conn, :index)} class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Inicio">
+            <a
+                href={Routes.page_path(@conn, :index)} 
+                class={if String.contains?(@conn.request_path, "/home"), do: "nav-link active py-3 border-bottom", else: "nav-link py-3 border-bottom"} 
+                title="" 
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right" 
+                data-bs-original-title="Inicio"
+            >
                 <i class="bi-house text-dark" style="font-size: 1.4rem;" aria-label="Inicio"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a href={Routes.employee_path(@conn, :index)} class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Empleados">
+            <a 
+                href={Routes.employee_path(@conn, :index)} 
+                class={if String.contains?(@conn.request_path, "/employees"), do: "nav-link active py-3 border-bottom", else: "nav-link py-3 border-bottom"} 
+                title="" 
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right" 
+                data-bs-original-title="Empleados"
+            >
                 <i class="bi-person text-dark" style="font-size: 1.4rem;" aria-label="Empleados"></i>
             </a>
         </li>
@@ -21,4 +35,4 @@
             </a>
         </li>
     </ul>
-  </div>
+</div>

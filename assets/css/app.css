@@ -43,3 +43,12 @@ html, body {
 a:hover, i:hover {
 	color: #0d6efd !important;
 } 
+
+.nav-link {
+	border-radius: 0 !important;
+}
+
+.nav-link.active {
+	border-right: 3px solid #0d6efd !important;
+	background: inherit !important;
+}
