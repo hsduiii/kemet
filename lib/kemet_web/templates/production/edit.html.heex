@@ -1,0 +1,5 @@
+<h1>Edit Production</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.production_path(@conn, :update, @production)) %>
+
+<span><%= link "Back", to: Routes.production_path(@conn, :index) %></span>

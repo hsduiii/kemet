@@ -84,7 +84,7 @@ defmodule KemetWeb.Router do
 
     # Employees
     resources "/employees", EmployeeController
-
+    resources "/productions", ProductionController
   end
 
   scope "/", KemetWeb do

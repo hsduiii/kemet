@@ -1,0 +1,30 @@
+<h1>Listing Productions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capacitor boxes</th>
+      <th>Capacitor type</th>
+      <th>Machine name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for production <- @productions do %>
+    <tr>
+      <td><%= production.capacitor_boxes %></td>
+      <td><%= production.capacitor_type %></td>
+      <td><%= production.machine_name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.production_path(@conn, :show, production) %></span>
+        <span><%= link "Edit", to: Routes.production_path(@conn, :edit, production) %></span>
+        <span><%= link "Delete", to: Routes.production_path(@conn, :delete, production), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Production", to: Routes.production_path(@conn, :new) %></span>

@@ -1,0 +1,23 @@
+<h1>Show Production</h1>
+
+<ul>
+
+  <li>
+    <strong>Capacitor boxes:</strong>
+    <%= @production.capacitor_boxes %>
+  </li>
+
+  <li>
+    <strong>Capacitor type:</strong>
+    <%= @production.capacitor_type %>
+  </li>
+
+  <li>
+    <strong>Machine name:</strong>
+    <%= @production.machine_name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.production_path(@conn, :edit, @production) %></span> |
+<span><%= link "Back", to: Routes.production_path(@conn, :index) %></span>
