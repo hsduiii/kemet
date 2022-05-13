@@ -15,6 +15,6 @@ defmodule Kemet.Productions.Production do
   def changeset(production, attrs) do
     production
     |> cast(attrs, [:capacitor_boxes, :capacitor_type, :machine_name])
-    |> validate_required([:capacitor_boxes, :capacitor_type, :machine_name])
+    |> validate_required([:employee_id, :capacitor_boxes, :capacitor_type, :machine_name])
   end
 end
