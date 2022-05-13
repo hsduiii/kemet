@@ -25,7 +25,14 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Producción">
+            <a 
+                href={Routes.production_path(@conn, :index)} 
+                class={if String.contains?(@conn.request_path, "/productions"), do: "nav-link active py-3 border-bottom", else: "nav-link py-3 border-bottom"} 
+                title="" 
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right" 
+                data-bs-original-title="Producción"
+            >
                 <i class="bi-box text-dark" style="font-size: 1.4rem;" aria-label="Producción"></i>
             </a>
         </li>
