@@ -19,14 +19,14 @@
             <div class="h-100 p-5 text-white bg-dark rounded-3">
             <h2>Administrar empleados</h2>
             <p>Crea, elimina o actualiza información de tus empleados.</p>
-            <%= button "Da click para administrar", to: Routes.employee_path(@conn, :index), class: "btn btn-outline-light", method: :get %>
+            <%= link "Da click para administrar", to: Routes.employee_path(@conn, :index), class: "btn btn-outline-light" %>
             </div>
         </div>
         <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
             <h2>Ver producción de la empresa</h2>
             <p>Supervisa la producción realizada por tus empleados.</p>
-            <button class="btn btn-outline-dark" type="button">Quiero ver</button>
+            <%= link "Quiero ver", to: Routes.production_path(@conn, :index), class: "btn btn-outline-dark" %>
             </div>
         </div>
         </div>

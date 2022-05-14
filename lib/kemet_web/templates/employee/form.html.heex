@@ -25,6 +25,6 @@
 
   <div class="d-flex justify-content-end mt-3">
     <%= submit "Guardar", class: "btn btn-outline-primary me-2" %>
-    <%= button "Regresar", to: Routes.employee_path(@conn, :index), class: "btn btn-sm btn-dark", method: :get %>
+    <%= link "Regresar", to: Routes.employee_path(@conn, :index), class: "btn btn-dark" %>
   </div>
 </.form>

@@ -19,13 +19,13 @@
       <ul class="navbar-nav ms-auto">
       <%= if @current_admin do %>
         <div class="dropdown">
-          <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+          <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle link" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
             <%= @current_admin.email %>
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-            <li><%= link "Mi cuenta", to: Routes.admin_settings_path(@conn, :edit), class: "dropdown-item" %></li>
+            <li><%= link "Mi cuenta", to: Routes.admin_settings_path(@conn, :edit), class: "dropdown-item link" %></li>
             <li><hr class="dropdown-divider"></li>
-            <li><%= link "Cerrar Sesión", to: Routes.admin_session_path(@conn, :delete), method: :delete, class: "dropdown-item" %></li>
+            <li><%= link "Cerrar Sesión", to: Routes.admin_session_path(@conn, :delete), method: :delete, class: "dropdown-item link" %></li>
           </ul>
         </div>
       <% end %>

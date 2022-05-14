@@ -7,7 +7,7 @@
     </header>
     <div class="p-2 mb-4 bg-light border rounded-3">
       <div class="d-flex justify-content-end">
-        <%= button "Añadir Empleado" , to: Routes.employee_path(@conn, :new), class: "btn btn-outline-primary", method: :get %>
+        <%= link "Añadir Empleado" , to: Routes.employee_path(@conn, :new), class: "btn btn-outline-primary" %>
       </div>
       <table class="table table-borderless table-striped">
         <thead>
@@ -43,17 +43,17 @@
                 <%= employee.inserted_at %>
               </td>
               <td>
-                <%= button to: Routes.employee_path(@conn, :show, employee), class: "btn btn-sm btn-link", method: :get do %>
+                <%= link to: Routes.employee_path(@conn, :show, employee), class: "btn btn-sm btn-link" do %>
                   <i class="bi-eye fs-5 text-dark"></i>
                 <% end %>
               </td>
               <td>
-                <%= button to: Routes.employee_path(@conn, :edit, employee), class: "btn btn-sm btn-link", method: :get do %>
+                <%= link to: Routes.employee_path(@conn, :edit, employee), class: "btn btn-sm btn-link" do %>
                   <i class="bi-pencil fs-5 text-dark"></i>
                 <% end %>
               </td>
               <td>
-                <%= button to: Routes.employee_path(@conn, :delete, employee), class: "btn btn-sm btn-link", method: :delete do %>
+                <%= link to: Routes.employee_path(@conn, :delete, employee), class: "btn btn-sm btn-link", method: :delete do %>
                   <i class="bi-trash fs-5 text-dark"></i>
                 <% end %>
               </td>
