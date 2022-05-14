@@ -9,29 +9,29 @@
       <ul class="list-group list-group-horizontal">
 
         <li class="list-group-item">
-          <strong>Name:</strong>
+          <strong>Nombre:</strong>
           <%= @employee.name %>
         </li>
 
         <li class="list-group-item">
-          <strong>Lastname:</strong>
+          <strong>Apellido:</strong>
           <%= @employee.lastname %>
         </li>
 
         <li class="list-group-item">
-          <strong>Age:</strong>
+          <strong>Edad:</strong>
           <%= @employee.age %>
         </li>
 
         <li class="list-group-item">
-          <strong>Active:</strong>
-          <%= @employee.active %>
+          <strong>Activo:</strong>
+          <%= if @employee.active, do: "Activo", else: "Inactivo" %>
         </li>
 
       </ul>
       <div class="d-flex justify-content-end">
-        <%= button "Editar", to: Routes.employee_path(@conn, :edit, @employee), class: "btn btn-sm btn-primary me-2", method: :get %>
-        <%= button "Regresar", to: Routes.employee_path(@conn, :index), class: "btn btn-sm btn-dark", method: :get %>
+        <%= button "Editar", to: Routes.employee_path(@conn, :edit, @employee), class: "btn btn-primary me-2", method: :get %>
+        <%= button "Regresar", to: Routes.employee_path(@conn, :index), class: "btn btn-dark", method: :get %>
       </div>
     </div>
     <footer class="pt-3 mt-5 text-muted border-top text-center">© 2022</footer>

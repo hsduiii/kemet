@@ -5,20 +5,20 @@
     </div>
   <% end %>
 
-  <%= label f, :name, class: "form-label" %>
+  <%= label f, :nombre, class: "form-label" %>
   <%= text_input f, :name, class: "form-control" %>
   <%= error_tag f, :name %>
 
-  <%= label f, :lastname, class: "form-label" %>
+  <%= label f, :apellido, class: "form-label" %>
   <%= text_input f, :lastname, class: "form-control" %>
   <%= error_tag f, :lastname %>
 
-  <%= label f, :age, class: "form-label" %>
+  <%= label f, :edad, class: "form-label" %>
   <%= number_input f, :age, class: "form-control" %>
   <%= error_tag f, :age %>
 
   <div class="form-check mt-3">
-    <%= label f, :active, class: "form-check-label" %>
+    <%= label f, :activo, class: "form-check-label" %>
     <%= checkbox f, :active, class: "form-check-input" %>
     <%= error_tag f, :active %>
   </div>
