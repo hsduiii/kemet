@@ -18,7 +18,7 @@ defmodule Kemet.Productions do
 
   """
   def list_productions do
-    Repo.all(Production)
+    Repo.all(Production) |> Repo.preload(:employee)
   end
 
   @doc """

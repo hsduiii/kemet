@@ -3,6 +3,7 @@ defmodule KemetWeb.ProductionController do
 
   alias Kemet.Productions
   alias Kemet.Productions.Production
+  alias Kemet.Employees
 
   def index(conn, _params) do
     productions = Productions.list_productions()
@@ -11,7 +12,8 @@ defmodule KemetWeb.ProductionController do
 
   def new(conn, _params) do
     changeset = Productions.change_production(%Production{})
-    render(conn, "new.html", changeset: changeset)
+    employees = Employees.list_employees()
+    render(conn, "new.html", changeset: changeset, employees: employees)
   end
 
   def create(conn, %{"production" => production_params}) do

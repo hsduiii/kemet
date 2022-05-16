@@ -12,6 +12,7 @@
       <table class="table table-borderless table-striped">
         <thead>
           <tr>
+            <th>Empleado</th>
             <th>Cantidad producida</th>
             <th>Tipo de capacitor</th>
             <th>Máquina</th>
@@ -23,6 +24,9 @@
         <tbody>
           <%= for production <- @productions do %>
             <tr>
+              <td>
+                <%= "#{production.employee.name} #{production.employee.lastname}" %>
+              </td>
               <td>
                 <%= production.capacitor_boxes %>
               </td>
