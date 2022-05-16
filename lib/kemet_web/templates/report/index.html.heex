@@ -1,9 +1,14 @@
 <section class="d-flex justify-content-center align-items-center">
     <div class="container py-4">
         <header class="pb-1 mb-4 border-bottom">
-            <p class="d-flex fs-4 fw-bold justify-content-start text-dark text-decoration-none text-capitalize">
-                Reportes
-            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="fs-4 fw-bold text-dark text-decoration-none text-capitalize">
+                    Reportes
+                </p>
+                <%= link to: Routes.report_path(@conn, :export), class: "btn btn-outline-dark" do %>
+                    Exportar <i class="bi-filetype-pdf no-hover"></i>
+                <% end %>
+            </div>
         </header>
 
         <div class="row align-items-md-stretch">
@@ -26,6 +31,25 @@
                 <div class="h-100 p-5 text-white bg-dark rounded-3">
                     <h2><%= get_used_machines(@conn) %></h2>
                     <p>Máquinas utilizadas</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-4">
+                <div class="h-100 p-5 border bg-light rounded-3">
+                    <h4>Empleado #1</h4>
+                    <p><%= get_top_employee(@conn) %></p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4">
+                <div class="h-100 p-5 border bg-light rounded-3">
+                    <h4>Capacitor más producido</h4>
+                    <p><%= get_top_capacitor(@conn) %></p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4">
+                <div class="h-100 p-5 border bg-light rounded-3">
+                    <h4>Máquina más utilziada</h4>
+                    <p><%= get_top_machine(@conn) %></p>
                 </div>
             </div>
         </div>

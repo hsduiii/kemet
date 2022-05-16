@@ -42,7 +42,11 @@ html, body {
 
 .link:hover, i:hover {
 	color: #0d6efd !important;
-} 
+}
+
+i.no-hover:hover {
+	color: inherit !important;
+}
 
 .nav-link {
 	border-radius: 0 !important;

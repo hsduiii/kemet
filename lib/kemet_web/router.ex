@@ -88,6 +88,7 @@ defmodule KemetWeb.Router do
     resources "/productions", ProductionController
     # Reports
     get "/reports", ReportController, :index
+    get "/reports/export", ReportController, :export
   end
 
   scope "/", KemetWeb do
