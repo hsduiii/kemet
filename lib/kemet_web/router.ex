@@ -84,7 +84,10 @@ defmodule KemetWeb.Router do
 
     # Employees
     resources "/employees", EmployeeController
+    # Productions
     resources "/productions", ProductionController
+    # Reports
+    get "/reports", ReportController, :index
   end
 
   scope "/", KemetWeb do

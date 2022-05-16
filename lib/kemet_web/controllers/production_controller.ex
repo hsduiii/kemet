@@ -12,8 +12,10 @@ defmodule KemetWeb.ProductionController do
 
   def new(conn, _params) do
     changeset = Productions.change_production(%Production{})
-    employees = Employees.list_employees()
-    render(conn, "new.html", changeset: changeset, employees: employees)
+    employees = Employees.list_active_employees()
+    machines = [:aa, :ab, :ac, :ba, :bb, :bc, :ca, :cb, :cc, :ea, :eb, :ec]
+    capacitor_types = [:aluminio, :tantalio, :ceramica, :poliester, :polipropileno, :poliestireno, :policarbonato, :plata, :papel]
+    render(conn, "new.html", changeset: changeset, employees: employees, machines: machines, capacitor_types: capacitor_types)
   end
 
   def create(conn, %{"production" => production_params}) do
@@ -36,7 +38,10 @@ defmodule KemetWeb.ProductionController do
   def edit(conn, %{"id" => id}) do
     production = Productions.get_production!(id)
     changeset = Productions.change_production(production)
-    render(conn, "edit.html", production: production, changeset: changeset)
+    employees = Employees.list_active_employees()
+    machines = [:aa, :ab, :ac, :ba, :bb, :bc, :ca, :cb, :cc, :ea, :eb, :ec]
+    capacitor_types = [:aluminio, :tantalio, :ceramica, :poliester, :polipropileno, :poliestireno, :policarbonato, :plata, :papel]
+    render(conn, "edit.html", production: production, changeset: changeset, employees: employees, machines: machines , capacitor_types: capacitor_types)
   end
 
   def update(conn, %{"id" => id, "production" => production_params}) do

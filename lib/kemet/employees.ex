@@ -22,6 +22,20 @@ defmodule Kemet.Employees do
   end
 
   @doc """
+  Returns the list of active employees.
+
+  ## Examples
+
+      iex> list_active_employees()
+      [%Employee{}, ...]
+
+  """
+  def list_active_employees do
+    query = from(Employee, where: [active: :true])
+    Repo.all(query)
+  end
+
+  @doc """
   Gets a single employee.
 
   Raises `Ecto.NoResultsError` if the Employee does not exist.

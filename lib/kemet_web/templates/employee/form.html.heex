@@ -6,15 +6,15 @@
   <% end %>
 
   <%= label f, :nombre, class: "form-label" %>
-  <%= text_input f, :name, class: "form-control" %>
+  <%= text_input f, :name, required: true, class: "form-control" %>
   <%= error_tag f, :name %>
 
   <%= label f, :apellido, class: "form-label" %>
-  <%= text_input f, :lastname, class: "form-control" %>
+  <%= text_input f, :lastname, required: true, class: "form-control" %>
   <%= error_tag f, :lastname %>
 
   <%= label f, :edad, class: "form-label" %>
-  <%= number_input f, :age, class: "form-control" %>
+  <%= number_input f, :age, required: true, min: 18, class: "form-control" %>
   <%= error_tag f, :age %>
 
   <div class="form-check mt-3">

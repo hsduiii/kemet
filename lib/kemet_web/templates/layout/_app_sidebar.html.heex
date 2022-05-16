@@ -37,7 +37,14 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Reportes">
+             <a 
+                href={Routes.report_path(@conn, :index)} 
+                class={if String.contains?(@conn.request_path, "/reports"), do: "nav-link active py-3 border-bottom", else: "nav-link py-3 border-bottom"} 
+                title="" 
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right" 
+                data-bs-original-title="Reportes"
+            >
                 <i class="bi-file-earmark-text text-dark" style="font-size: 1.4rem;" aria-label="Reportes"></i>
             </a>
         </li>

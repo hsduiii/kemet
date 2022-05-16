@@ -35,7 +35,7 @@ defmodule Kemet.Productions do
       ** (Ecto.NoResultsError)
 
   """
-  def get_production!(id), do: Repo.get!(Production, id)
+  def get_production!(id), do: Repo.get!(Production, id) |> Repo.preload(:employee)
 
   @doc """
   Creates a production.

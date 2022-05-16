@@ -6,19 +6,19 @@
   <% end %>
 
   <%= label f, :empleado, class: "form-label" %>
-  <%= select f, :employee_id, Enum.map(@employees, &{&1.name, &1.id}), prompt: [key: "Selecciona un empleado", disabled: true, selected: true], class: "form-select" %>
+  <%= select f, :employee_id, Enum.map(@employees, &{"#{&1.name} #{&1.lastname}", &1.id}), prompt: [key: "Selecciona un empleado", disabled: true, selected: true], required: true, class: "form-select" %>
   <%= error_tag f, :capacitor_boxes %>
 
   <%= label f, :cantidad_producida, class: "form-label" %>
-  <%= number_input f, :capacitor_boxes, class: "form-control" %>
+  <%= number_input f, :capacitor_boxes, required: true, min: 1, class: "form-control" %>
   <%= error_tag f, :capacitor_boxes %>
 
   <%= label f, :tipo_de_capacitor, class: "form-label" %>
-  <%= text_input f, :capacitor_type, class: "form-control" %>
+  <%= select f, :capacitor_type, Enum.map(@capacitor_types, &{&1, &1}), class: "form-select" %>
   <%= error_tag f, :capacitor_type %>
 
   <%= label f, :maquina, class: "form-label" %>
-  <%= text_input f, :machine_name, class: "form-control" %>
+  <%= select f, :machine_name, Enum.map(@machines, &{&1, &1}), class: "form-select" %>
   <%= error_tag f, :machine_name %>
 
   <div class="d-flex justify-content-end mt-3">
