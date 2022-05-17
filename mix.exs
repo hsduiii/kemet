@@ -20,7 +20,7 @@ defmodule Kemet.MixProject do
   def application do
     [
       mod: {Kemet.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :uuid]
     ]
   end
 
