@@ -1,6 +1,16 @@
 ### About
   Admin panel where you can register employees, their daily productions and export reports.
 
+### Test Application
+  * The application is already online: [`Go to application.`](https://hsduiii-kemet.herokuapp.com/)
+
+  ##### Credentials
+
+  * User: `admin@kemet.com.mx`
+  * Password: `adm1n!007`
+
+### You can also install it locally.
+
 ### Requirements
 
   Elixir v1.12+ \
