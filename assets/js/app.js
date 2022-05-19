@@ -21,8 +21,7 @@ import "../css/app.css"
 
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.
 import "phoenix_html"
-import "./highcharts"
-import "./chartkick"
+
 // Bootstrap 5
 import * as bootstrap from "./bootstrap.js";
 
