@@ -1,19 +1,36 @@
+# Requirements
+
+  Elixir v1.12+ \
+  Erlang OTP v24+ \
+  Postgres DB \
+  Docker \
+  Nodejs v14+ \
+  NPM 6.14.16+
+
+# Setup
+
+  * Install Elixir and Erlang: [`see instalation guide.`](https://elixir-lang.org/install.html)
+  * Install Docker: [`see instalation guide.`](https://docs.docker.com/desktop/)
+  * Install NodeJS and NPM: [`see instalation guide.`](https://nodejs.org/es/)
+  * Create postgres database: \
+   `docker pull postgres`\
+   `docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=pgadm1n! -d postgres `
+
+# Install Kemet App
+
+  `git clone https://github.com/hsduiii/kemet.git`
+
 # Kemet
 
-To start your Phoenix server:
+To start the application:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+  * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Visit application at [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# Credentials
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+  * User: `admin@kemet.com.mx`
+  * Password: `adm1n!007`
