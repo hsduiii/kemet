@@ -1,4 +1,7 @@
-# Requirements
+### About
+  Admin panel where you can register employees, their daily productions and export reports.
+
+### Requirements
 
   Elixir v1.12+ \
   Erlang OTP v24+ \
@@ -7,7 +10,7 @@
   Nodejs v14+ \
   NPM 6.14.16+
 
-# Setup
+### Setup
 
   * Install Elixir and Erlang: [`see instalation guide.`](https://elixir-lang.org/install.html)
   * Install Docker: [`see instalation guide.`](https://docs.docker.com/desktop/)
@@ -16,11 +19,11 @@
    `docker pull postgres`\
    `docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=pgadm1n! -d postgres `
 
-# Install Kemet App
+### Install Kemet App
 
   `git clone https://github.com/hsduiii/kemet.git`
 
-# Kemet
+### Kemet
 
 To start the application:
 
@@ -30,7 +33,7 @@ To start the application:
 
 Visit application at [`localhost:4000`](http://localhost:4000) from your browser.
 
-# Credentials
+### Credentials
 
   * User: `admin@kemet.com.mx`
   * Password: `adm1n!007`
