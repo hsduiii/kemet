@@ -6,7 +6,7 @@ defmodule Kemet.Repo.Migrations.CreateProductions do
       add :capacitor_boxes, :integer
       add :capacitor_type, :string
       add :machine_name, :string
-      add :employee_id, references(:employees, on_delete: :nothing), null: false
+      add :employee_id, references(:employees, on_delete: :delete_all), null: false
 
       timestamps()
     end
